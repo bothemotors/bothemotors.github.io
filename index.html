@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bothe Motors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<!-- 
+<div class="page-header">
+    <h1>Responsive Image Tiles <small>A template, demonstrating a set of responsive image tiles</small></h1>
+</div>
+<!-- Responsive Image Tiles - START -->
+
+
+
+<div class="container-fluid">
+    <div class="row text-center">
+    <img src="imgs/logo.png" alt="Bothe Motors" style="width: 20%">
+        <!-- <h3 class="headermessage">Bothe Motors</h3> -->
+    </div>
+    <div class="row">
+        <div class="image-block col-sm-4" style="background: url(./imgs/1.jpg) no-repeat center top;background-size:cover;">
+            <p>Car Manufacturing</p>
+        </div>
+        <div class="image-block col-sm-8" style="background: url(./imgs/2.jpg) no-repeat center top;background-size:cover;">
+            <p>Marketing and Sale</p>
+        </div>
+        <div class="image-block col-sm-4" style="background: url(./imgs/3.png) no-repeat center top;background-size:cover;">
+            <p> Electric Vehicles & Advance Battary</p>
+        </div>
+        <div class="image-block col-sm-4" style="background: url(./imgs/4.jpg) no-repeat center top;background-size:cover;">
+            <p> Research and Innovation - AI  </p>
+        </div>
+        <div class="image-block col-sm-4" style="background: url(./imgs/5.png) no-repeat center top;background-size:cover;">
+            <p> Fleet Management </p>
+        </div>
+        <div class="image-block col-sm-8" style="background: url(./imgs/6.jpg) no-repeat center top;background-size:cover;">
+            <p> Made for Indians by Indians: Make in India </p>
+        </div>
+        <div class="image-block col-sm-4" style="background: url(./imgs/8.png) no-repeat center top;background-size:cover;">
+            <p> Car in Pursuit of Freedom! </p>            
+        </div>
+    </div>
+    
+    
+    <div class="row" id="contRow">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 text-center"> 
+            <ul class="faicons">
+                <li class="faspot_1"><a href=""><i class="fa fa-linkedin fa-3x"></i></a></li>
+                <li class="faspot_2"><a href=""><i class="fa fa-facebook fa-3x"></i></a></li>
+                <li class="faspot_3"><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                <li class="faspot_4"><a href=""><i class="fa fa-google fa-2x"></i></a></li>
+                <li class="faspot_5"><a href=""><i class="fa fa-reddit fa-2x"></i></a></li>
+                <li class="faspot_6"><a href="https://github.com/bothemotors" target="_blank"><i class="fa fa-git fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+.headermessage {
+  margin: 19px;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.image-block {
+    border: 3px solid white ;
+    background-color: black;
+    padding: 0px;    
+    margin: 0px;
+    height:200px;
+    text-align: center;
+    vertical-align: bottom;
+}
+.image-block > p {
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    font-size: 19px;
+    padding-top: 150px;
+    background-color: rgba(3,3,3,0.0);
+    color: rgba(6,6,6,0.0);
+}
+.image-block:hover > p {
+    background-color: rgba(3,3,3,0.5);    
+    color: white;    
+}
+
+
+    body {
+        background: white;
+    }
+
+    #contRow {
+        margin-bottom: 70px;
+    }
+
+    .faicons {
+        position: relative;
+        height: 3em;
+        width: 13.5em;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .faicons li {
+        display: block;
+        height: 4em;
+        line-height: 4em;
+        margin: -2.2em;
+        position: absolute;
+        -webkit-transition: -webkit-transform .7s;
+        -moz-transition: -moz-transform .7s;
+        -ms-transition: -ms-transform .7s;
+        -o-transition: -o-transform .7s;
+        transition: transform 0.7s;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        text-align: center;
+        width: 4em;
+    }
+
+    .faicons a {
+        color: #fffdf0;
+        display: block;
+        height: 4em;
+        line-height: 6em;
+        text-align: center;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        width: 4em;
+    }
+
+    .faicons li:hover {
+        -webkit-transform: scale(1.3,1.3) rotate(-35deg);
+        -moz-transform: scale(1.3,1.3) rotate(-35deg);
+        -ms-transform: scale(1.3,1.3) rotate(-35deg);
+        -o-transform: scale(1.3,1.3) rotate(-35deg);
+        transform: scale(1.3,1.3) rotate(-35deg);
+    }
+
+    .faspot_1 {
+        background: #1A85BC;
+        left: 0;
+        top: 50%;
+    }
+
+    .faspot_2 {
+        background: #02aaf8;
+        top: 75;
+        left: 25%;
+    }
+
+    .faspot_3 {
+        background: #5EA9DD;
+        left: 50%;
+        top: 50%;
+    }
+
+    .faspot_4 {
+        background: #DC4A38;
+        top: 75;
+        left: 75%;
+    }
+
+    .faspot_5 {
+        background: #FF4500;
+        left: 100%;
+        top: 50%;
+    }
+
+    .faspot_6 {
+        background: #000000;
+        top: 75;
+        left: 125%;
+    }
+</style>
+<!-- Responsive Image Tiles - END -->
+
+</div>
+
+</body>
+</html>
