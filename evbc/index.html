@@ -1,0 +1,109 @@
+<h3>EV Battery Calculator (online)</h3>
+<p><script type="text/javascript" src="js/calc_ev_battery.js?c4e8a1&amp;c4e8a1"></script></p>
+<table style="background-color: #918f00; color: white;"><tbody><tr><td
+class="noBorder" style="text-align: center;" colspan="2">Vehicle Range</td><td
+class="noBorder" style="text-align: center;" colspan="2">Average Energy Consumption</td><td
+class="noBorder" style="text-align: center;" colspan="2">Nominal Battery Voltage</td></tr><tr><td
+class="noBorder" style="text-align: right;">D<sub>v</sub> [km]</td><td
+class="noBorder" style="text-align: left;"><input
+id="Dv_km" maxlength="10" name="Dv_km" size="5" type="text" value="250" /></td><td
+class="noBorder" style="text-align: right;">E<sub>avg</sub> [Wh/km]</td><td
+class="noBorder" style="text-align: left;"><input
+id="Eavg_Whpkm" maxlength="10" name="Eavg_Whpkm" size="5" type="text" value="161.7451" /></td><td
+class="noBorder" style="text-align: right;">U<sub>bp</sub> [V]</td><td
+class="noBorder" style="text-align: left;"><input
+id="Ubp_V" maxlength="10" name="Ubp_V" size="5" type="text" value="400" /></td></tr><tr><td
+class="noBorder" style="text-align: center;">Cell type</td><td
+class="noBorder" style="text-align: center;">L<sub>bc</sub> [m]</td><td
+class="noBorder" style="text-align: center;">D<sub>bc</sub> [m]</td><td
+class="noBorder" style="text-align: center;">H<sub>bc</sub> [m]</td><td
+class="noBorder" style="text-align: center;">W<sub>bc</sub> [m]</td><td
+class="noBorder" style="text-align: center;">T<sub>bc</sub> [m]</td></tr><tr><td
+class="noBorder" style="text-align: left;"><select
+id="cell_type" name="cell_type"><option
+value="cylindrical">Cylindrical</option><option
+value="pouch">Pouch</option></select></td><td
+class="noBorder" style="text-align: center;"><input
+id="Lbc_m" maxlength="10" name="Lbc_m" size="5" type="text" value="0.0653" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Dbc_m" maxlength="10" name="Dbc_m" size="5" type="text" value="0.0185" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Hbc_m" maxlength="10" name="Hbc_m" size="5" type="text" value="0" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Wbc_m" maxlength="10" name="Wbc_m" size="5" type="text" value="0" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Tbc_m" maxlength="10" name="Tbc_m" size="5" type="text" value="0" /></td></tr><tr><td
+class="noBorder" style="text-align: center;">&nbsp;</td><td
+class="noBorder" style="text-align: center;">m<sub>bc</sub> [kg]</td><td
+class="noBorder" style="text-align: center;">C<sub>bc</sub> [Ah]</td><td
+class="noBorder" style="text-align: center;">U<sub>bc</sub> [V]</td><td
+class="noBorder" style="text-align: center;">C-rate<sub>bcc</sub> [-]</td><td
+class="noBorder" style="text-align: center;">C-rate<sub>bcp</sub> [-]</td></tr><tr><td
+class="noBorder" style="text-align: center;"></td><td
+class="noBorder" style="text-align: center;"><input
+id="mbc_kg" maxlength="10" name="mbc_kg" size="5" type="text" value="0.0485" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Cbc_Ah" maxlength="10" name="Cbc_Ah" size="5" type="text" value="3.2" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ubc_V" maxlength="10" name="Ubc_V" size="5" type="text" value="3.6" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Cratebcc_z" maxlength="10" name="Cratebcc_z" size="5" type="text" value="1" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Cratebcp_z" maxlength="10" name="Cratebcp_z" size="5" type="text" value="1" /></td></tr><tr><td
+class="noBorder" style="text-align: center;" colspan="6"><button
+onclick="calcEvBattery()">Calculate</button></td></tr><tr><td
+class="noBorder" style="text-align: center;" colspan="6"><strong>Battery Cell Performance</strong></td></tr><tr><td
+class="noBorder" style="text-align: center;">&nbsp;</td><td
+class="noBorder" style="text-align: center;">E<sub>bc</sub> [Wh]</td><td
+class="noBorder" style="text-align: center;">V<sub>bc</sub> [l]</td><td
+class="noBorder" style="text-align: center;">uV<sub>bc</sub> [Wh/l]</td><td
+class="noBorder" style="text-align: center;">uG<sub>bc</sub> [Wh/kg]</td><td
+class="noBorder" style="text-align: center;">&nbsp;</td></tr><tr><td
+class="noBorder" style="text-align: center;">&nbsp;</td><td
+class="noBorder" style="text-align: center;"><input
+id="Ebc_Wh" maxlength="10" name="Ebc_Wh" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Vbc_l" maxlength="10" name="Vbc_l" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="uVbc_Whpl" maxlength="10" name="uVbc_Whpl" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="uGbc_Whpkg" maxlength="10" name="uGbc_Whpkg" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;">&nbsp;</td></tr><tr><td
+class="noBorder" style="text-align: center;" colspan="6"><strong>Battery Pack Performance</strong></td></tr><tr><td
+class="noBorder" style="text-align: center;"># cells / string</td><td
+class="noBorder" style="text-align: center;"># strings</td><td
+class="noBorder" style="text-align: center;"># cells</td><td
+class="noBorder" style="text-align: center;">E<sub>s</sub> [Wh]</td><td
+class="noBorder" style="text-align: center;">E<sub>bp</sub> [kWh]</td><td
+class="noBorder" style="text-align: center;">C<sub>bp</sub> [Ah]</td></tr><tr><td
+class="noBorder" style="text-align: center;"><input
+id="Ncs_z" maxlength="10" name="Ncs_z" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Nsb_z" maxlength="10" name="Nsb_z" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ncb_z" maxlength="10" name="Ncb_z" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ebs_Wh" maxlength="10" name="Ebs_Wh" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ebp_kWh" maxlength="10" name="Ebp_kWh" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Cbp_Ah" maxlength="10" name="Cbp_Ah" size="5" type="text" value="" /></td></tr><tr><td
+class="noBorder" style="text-align: center;">mbp [kg]</td><td
+class="noBorder" style="text-align: center;">Vbp [l]</td><td
+class="noBorder" style="text-align: center;">Ibpp [A]</td><td
+class="noBorder" style="text-align: center;">Pbpp [kW]</td><td
+class="noBorder" style="text-align: center;">Ibpc [A]</td><td
+class="noBorder" style="text-align: center;">Pbpc [kW]</td></tr><tr><td
+class="noBorder" style="text-align: center;"><input
+id="mbp_kg" maxlength="10" name="mbp_kg" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Vbp_l" maxlength="10" name="Vbp_l" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ibpp_A" maxlength="10" name="Ibpp_A" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Pbpp_kW" maxlength="10" name="Pbpp_kW" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Ibpc_A" maxlength="10" name="Ibpc_A" size="5" type="text" value="" /></td><td
+class="noBorder" style="text-align: center;"><input
+id="Pbpc_kW" maxlength="10" name="Pbpc_kW" size="5" type="text" value="" /></td></tr></tbody></table>
+<h4>From <a target="_blank" href="https://x-engineer.org/automotive-engineering/vehicle/electric-vehicles/ev-design-battery-calculation/" >x-engineer.org</a>, here just for ease of use. </h4>
